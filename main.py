@@ -12,8 +12,21 @@ def shortest_shortest_path(graph, source):
       a dict where each key is a vertex and the value is a tuple of
       (shortest path weight, shortest path number of edges). See test case for example.
     """
-    ### TODO
-    pass
+    count, weight = 0
+    frontier = set((source, 0))
+    res = dict(tuple)
+    visited = set()
+
+    while len(visited) != len(graph.keys()):
+        vertex = frontier.pop()
+        for node in graph[vertex][0]:
+          if node != visited:
+            frontier.update(graph[vertex])
+        if vertex[0] != visited:
+            res[vertex] = 
+
+            visited.add(vertex[0])
+    return res
 
 def bfs_path(graph, source):
     """

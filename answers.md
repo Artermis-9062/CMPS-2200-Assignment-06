@@ -1,7 +1,8 @@
 # CMPS 2200 Assignment 6
 ## Answers
 
-**Name:**_________________________
+**Name:** Chuong Hoang Pham
+_________________________
 
 
 Place all written answers from `assignment-06.md` here for easier grading.
