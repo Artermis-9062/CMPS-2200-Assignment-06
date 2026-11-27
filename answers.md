@@ -12,6 +12,15 @@ Place all written answers from `assignment-06.md` here for easier grading.
 
 - **1b. (2 pts)** Work and span of `shortest_shortest_path`
 
+**Work:** $O((|V| + |E|) \log |V|)$, which is $O(|E| \log |V|)$ when every vertex is reachable from the source.
+
+The algorithm is Dijkstra's algorithm with heap entries ordered by (weight, number of edges). Each vertex is finalized at most once, so each edge is scanned at most once and causes at most one `heappush`. The heap therefore holds $O(|E|)$ entries, and each `heappush` or `heappop` costs $O(\log |E|) = O(\log |V|)$, since $|E| \le |V|^2$. Comparing the tuples takes $O(1)$, so tracking the number of edges does not change the bound.
+
+**Span:** $O((|V| + |E|) \log |V|)$, the same as the work.
+
+The algorithm is sequential: each `heappop` depends on the pushes made before it, and the edges are processed one at a time.
+
+
 
 **3. Improving Dijkstra**
 
